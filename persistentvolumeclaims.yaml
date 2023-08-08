@@ -1,0 +1,71 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"name":"mongo-pvc-app","namespace":"default"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"5Gi"}},"storageClassName":"ionos-enterprise-ssd"}}
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: cloud.ionos.com
+      volume.kubernetes.io/selected-node: pool1-xmfjfrfuzo
+      volume.kubernetes.io/storage-provisioner: cloud.ionos.com
+    creationTimestamp: "2022-09-10T10:32:19Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    name: mongo-pvc-app
+    namespace: default
+    resourceVersion: "30000608161"
+    uid: 18b74c40-d245-444f-9315-1368f7f15aba
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 5Gi
+    storageClassName: ionos-enterprise-ssd
+    volumeMode: Filesystem
+    volumeName: pvc-18b74c40-d245-444f-9315-1368f7f15aba
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 5Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"name":"mongo-pvc-logging","namespace":"default"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"5Gi"}},"storageClassName":"ionos-enterprise-ssd"}}
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: cloud.ionos.com
+      volume.kubernetes.io/selected-node: pool1-xmfjfrfuzo
+      volume.kubernetes.io/storage-provisioner: cloud.ionos.com
+    creationTimestamp: "2022-09-10T10:40:32Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    name: mongo-pvc-logging
+    namespace: default
+    resourceVersion: "30000608162"
+    uid: 11d8962a-309b-44db-925f-4bf2a633d604
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 5Gi
+    storageClassName: ionos-enterprise-ssd
+    volumeMode: Filesystem
+    volumeName: pvc-11d8962a-309b-44db-925f-4bf2a633d604
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 5Gi
+    phase: Bound
+kind: List
+metadata:
+  resourceVersion: ""

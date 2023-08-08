@@ -1,0 +1,466 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: c1ffeedc11643055b24b5378645400fb20e91a70a62ecb93f0f9f9536df2817c
+      cni.projectcalico.org/podIP: 10.223.213.15/32
+      cni.projectcalico.org/podIPs: 10.223.213.15/32
+      kubectl.kubernetes.io/restartedAt: "2023-06-11T16:31:31+02:00"
+    creationTimestamp: "2023-08-07T17:33:17Z"
+    generateName: lessony-6566864dbb-
+    labels:
+      app: lessony
+      pod-template-hash: 6566864dbb
+    name: lessony-6566864dbb-rdb8t
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: lessony-6566864dbb
+      uid: 682d7dcc-a136-4f26-9093-53a0d4a31b13
+    resourceVersion: "33548724641"
+    uid: d128f133-32da-441c-9a9c-c37f920d6d8d
+  spec:
+    containers:
+    - env:
+      - name: MONGO_USER_LOGGING
+        valueFrom:
+          secretKeyRef:
+            key: mongo-logging-root-username
+            name: secret
+      - name: MONGO_PASSWORD_LOGGING
+        valueFrom:
+          secretKeyRef:
+            key: mongo-logging-root-password
+            name: secret
+      - name: MONGO_USER
+        valueFrom:
+          secretKeyRef:
+            key: mongo-root-username
+            name: secret
+      - name: MONGO_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: mongo-root-password
+            name: secret
+      - name: SMTP_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: smtp-username
+            name: secret
+      - name: SMTP_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: smtp-password
+            name: secret
+      - name: JWT_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: jwt-secret
+            name: secret
+      - name: MONGO_HOST_LOGGING
+        valueFrom:
+          configMapKeyRef:
+            key: database-url-logging
+            name: config-map
+      - name: MONGO_URI
+        valueFrom:
+          configMapKeyRef:
+            key: database-url
+            name: config-map
+      - name: SMTP_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-host
+            name: config-map
+      - name: SMTP_PORT
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-port
+            name: config-map
+      - name: EMAIL_FROM
+        valueFrom:
+          configMapKeyRef:
+            key: email-from
+            name: config-map
+      - name: APP_PORT
+        value: "8080"
+      - name: APP_PREFIX_PATH
+        value: /api/v1
+      image: kylecode/lessony:latest
+      imagePullPolicy: Always
+      name: lessony
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-fsv2c
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: regcred
+    nodeName: pool1-hbuat6xad4
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-fsv2c
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-08-07T17:33:17Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-08-07T17:33:19Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-08-07T17:33:19Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-08-07T17:33:17Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://eac8ee64f8e919f66ca2f44f7ecc7eddc6fcb17957a544166d9924bae58ddc1d
+      image: docker.io/kylecode/lessony:latest
+      imageID: docker.io/kylecode/lessony@sha256:6c837be55e664dae8695a866e67a580acc6efbe9f30da6954e4eefacc7c733ba
+      lastState: {}
+      name: lessony
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-08-07T17:33:19Z"
+    hostIP: 85.215.162.54
+    phase: Running
+    podIP: 10.223.213.15
+    podIPs:
+    - ip: 10.223.213.15
+    qosClass: BestEffort
+    startTime: "2023-08-07T17:33:17Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: e0ab99a19c8972388148923084fac5fc2274cece3f146287b76de5488c25c44e
+      cni.projectcalico.org/podIP: 10.223.213.12/32
+      cni.projectcalico.org/podIPs: 10.223.213.12/32
+      kubectl.kubernetes.io/restartedAt: "2023-06-10T13:32:34+02:00"
+    creationTimestamp: "2023-07-29T03:05:10Z"
+    generateName: mongodb-deployment-5d57d75b65-
+    labels:
+      app: mongodb
+      pod-template-hash: 5d57d75b65
+    name: mongodb-deployment-5d57d75b65-mthjc
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: mongodb-deployment-5d57d75b65
+      uid: aeacb10e-8ecc-4c56-8c0f-505de3d77a76
+    resourceVersion: "33425376420"
+    uid: 18665579-a9fd-4dd7-becf-05862232ef7d
+  spec:
+    containers:
+    - args:
+      - --dbpath
+      - /data/db
+      env:
+      - name: MONGO_INITDB_ROOT_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: mongo-root-username
+            name: secret
+      - name: MONGO_INITDB_ROOT_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: mongo-root-password
+            name: secret
+      image: mongo
+      imagePullPolicy: Always
+      name: mongodb
+      ports:
+      - containerPort: 27017
+        protocol: TCP
+      resources:
+        limits:
+          cpu: "1"
+          memory: 1000Mi
+        requests:
+          cpu: "1"
+          memory: 1000Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /data/db
+        name: mongo-data-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-s4v4q
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: pool1-hbuat6xad4
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: mongo-data-dir
+      persistentVolumeClaim:
+        claimName: mongo-pvc-app
+    - name: kube-api-access-s4v4q
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-07-29T03:05:10Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-07-29T03:09:02Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-07-29T03:09:02Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-07-29T03:05:10Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://faa0b6707556f6a562be6532bd393d66342a8118552c56f710530c8987b3854d
+      image: docker.io/library/mongo:latest
+      imageID: docker.io/library/mongo@sha256:20f3adcaffe2193e49dd502c8299b770d49a1e0643e0e9db250d5c127b1e9ed8
+      lastState: {}
+      name: mongodb
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-07-29T03:09:02Z"
+    hostIP: 85.215.162.54
+    phase: Running
+    podIP: 10.223.213.12
+    podIPs:
+    - ip: 10.223.213.12
+    qosClass: Guaranteed
+    startTime: "2023-07-29T03:05:10Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: 48543849d4d2f1c454ac02bb29324c7b8ddbe6f0da0a97f910813cdca3f7201a
+      cni.projectcalico.org/podIP: 10.223.213.11/32
+      cni.projectcalico.org/podIPs: 10.223.213.11/32
+    creationTimestamp: "2023-07-29T03:05:10Z"
+    generateName: mongodb-deployment-logging-578899544d-
+    labels:
+      app: mongodb-logging
+      pod-template-hash: 578899544d
+    name: mongodb-deployment-logging-578899544d-v9krt
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: mongodb-deployment-logging-578899544d
+      uid: 30940f26-7715-47f3-8688-69455f855ef5
+    resourceVersion: "33425376407"
+    uid: cb2eafd0-1046-49d7-bb0e-6bbfd98ecc8a
+  spec:
+    containers:
+    - args:
+      - --dbpath
+      - /data/db
+      env:
+      - name: MONGO_INITDB_ROOT_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: mongo-logging-root-username
+            name: secret
+      - name: MONGO_INITDB_ROOT_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: mongo-logging-root-password
+            name: secret
+      image: mongo
+      imagePullPolicy: Always
+      name: mongodb-logging
+      ports:
+      - containerPort: 27017
+        protocol: TCP
+      resources:
+        limits:
+          cpu: 500m
+          memory: 256Mi
+        requests:
+          cpu: 500m
+          memory: 256Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /data/db
+        name: mongo-data-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-mfnkl
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: pool1-hbuat6xad4
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: mongo-data-dir
+      persistentVolumeClaim:
+        claimName: mongo-pvc-logging
+    - name: kube-api-access-mfnkl
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-07-29T03:05:10Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-07-29T03:09:02Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-07-29T03:09:02Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-07-29T03:05:10Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://4f5403d59e4481ab46642d71393d77b4e240f495a322b5a242987deb5afc745e
+      image: docker.io/library/mongo:latest
+      imageID: docker.io/library/mongo@sha256:20f3adcaffe2193e49dd502c8299b770d49a1e0643e0e9db250d5c127b1e9ed8
+      lastState: {}
+      name: mongodb-logging
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-07-29T03:09:01Z"
+    hostIP: 85.215.162.54
+    phase: Running
+    podIP: 10.223.213.11
+    podIPs:
+    - ip: 10.223.213.11
+    qosClass: Guaranteed
+    startTime: "2023-07-29T03:05:10Z"
+kind: List
+metadata:
+  resourceVersion: ""

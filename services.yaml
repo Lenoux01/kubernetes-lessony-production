@@ -1,0 +1,124 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2022-07-20T17:34:16Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "30000608366"
+    uid: a69e5b1b-4218-49e5-adb3-a6cc4b0493fc
+  spec:
+    clusterIP: 10.233.0.1
+    clusterIPs:
+    - 10.233.0.1
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 11946
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"lessony-service","namespace":"default"},"spec":{"ports":[{"port":8080,"protocol":"TCP","targetPort":8080}],"selector":{"app":"lessony"}}}
+    creationTimestamp: "2022-09-10T10:42:08Z"
+    name: lessony-service
+    namespace: default
+    resourceVersion: "30000608367"
+    uid: 82d9de5a-6c5c-4c00-bc6a-9773ee8ef594
+  spec:
+    clusterIP: 10.233.52.253
+    clusterIPs:
+    - 10.233.52.253
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: lessony
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mongodb-service","namespace":"default"},"spec":{"ports":[{"nodePort":30001,"port":27017,"protocol":"TCP","targetPort":27017}],"selector":{"app":"mongodb"},"type":"NodePort"}}
+    creationTimestamp: "2022-09-10T10:32:44Z"
+    name: mongodb-service
+    namespace: default
+    resourceVersion: "30000608368"
+    uid: 3debcc80-dcbf-45c3-b1f4-700ec7dd80b1
+  spec:
+    clusterIP: 10.233.23.75
+    clusterIPs:
+    - 10.233.23.75
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 30001
+      port: 27017
+      protocol: TCP
+      targetPort: 27017
+    selector:
+      app: mongodb
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mongodb-service-logging","namespace":"default"},"spec":{"ports":[{"nodePort":30002,"port":27017,"protocol":"TCP","targetPort":27017}],"selector":{"app":"mongodb-logging"},"type":"NodePort"}}
+    creationTimestamp: "2022-09-10T10:40:43Z"
+    name: mongodb-service-logging
+    namespace: default
+    resourceVersion: "30000608369"
+    uid: e2c24ead-59c1-4b57-aaa3-a1abe0c6a93d
+  spec:
+    clusterIP: 10.233.41.7
+    clusterIPs:
+    - 10.233.41.7
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 30002
+      port: 27017
+      protocol: TCP
+      targetPort: 27017
+    selector:
+      app: mongodb-logging
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
