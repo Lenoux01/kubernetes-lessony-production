@@ -2,8 +2,8 @@ apiVersion: v1
 items:
 - apiVersion: v1
   data:
-    database-url: mongodb+srv://lessonyProdAppBackendUser:ZRg9iRN3VvMZFiQBkhyPh3AXUP@m-9t33d9vgml0hdr14.mongodb.de-txl.ionos.com
-    database-url-logging: mongodb-service-logging
+    database-url: mongo-uri
+    database-url-logging: mongo-uri-logging
     email-from: info@kylecode.de
     smtp-host: send.one.com
     smtp-port: "465"
@@ -11,11 +11,11 @@ items:
   metadata:
     annotations:
       kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","data":{"database-url":"mongodb-service","database-url-logging":"mongodb-service-logging","email-from":"info@kylecode.de","smtp-host":"send.one.com","smtp-port":"465"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"config-map","namespace":"default"}}
+        {"apiVersion":"v1","data":{"database-url":"mongo-uri","database-url-logging":"mongodb-uri-logging","email-from":"info@kylecode.de","smtp-host":"send.one.com","smtp-port":"465"},"kind":"ConfigMap","metadata":{"annotations":{},"creationTimestamp":"2022-07-20T22:06:56Z","name":"config-map","namespace":"default","resourceVersion":"33548650020","uid":"3a53e07c-7819-4da9-9214-a51e07bbb3fe"}}
     creationTimestamp: "2022-07-20T22:06:56Z"
     name: config-map
     namespace: default
-    resourceVersion: "33548650020"
+    resourceVersion: "33675994895"
     uid: 3a53e07c-7819-4da9-9214-a51e07bbb3fe
 - apiVersion: v1
   data:
@@ -53,6 +53,8 @@ items:
   kind: ConfigMap
   metadata:
     annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","data":{"ca.crt":"-----BEGIN CERTIFICATE-----\nMIIFETCCAvmgAwIBAgIUHQmLvHjJEBEA/7DaP0+ltrGiHzMwDQYJKoZIhvcNAQEL\nBQAwFTETMBEGA1UEAwwKa3ViZXJuZXRlczAeFw0yMjA3MjAxNzMyMzNaFw0zMjA3\nMTcxNzMyMzNaMBUxEzARBgNVBAMMCmt1YmVybmV0ZXMwggIiMA0GCSqGSIb3DQEB\nAQUAA4ICDwAwggIKAoICAQDkNKNH+9dWN0uFzvjDG0ENBuecjmt5pArKBScqWpvJ\nDG+wVnSWsHlWOQe3FVPD0F9fRzGYEw4/v8vf2cPInMtcXzWVcZrz91Mlolu/cgo3\nCfZpmWGoJ4naiaStHp4cx7tmTIyP7Jjn9eOSDj1tXkEoqeXjW91gKxO0yOg9G1lF\nYjTIwbkiMlf2ixo2GZDmI9hqcygetaKWtmsyq38QXqPp68xgL45ITE5usQMRqvvy\n9jKZhKD+GmPtmhk3Ys29WhTTjl31uavq2blkFsEX1wVKIG5ydwaoYKYItqH2qmi3\nG71tLKxlzv2bedR9dR13VISJcot5Xnu9987P2RXxfkBY95CT4bXlx8qwAJC5kgWU\n+bnKgubXHl1rhQw5tf41CyCRwUZ1DVg+xja4kmi7xGu153M7VL2qzn0qF7rGiqJc\nvrC6sUViGdAm6+dnxzQcRsERFEXm7EjJjd32fAsQ3yzI/D/XoCOcpaUZ6ybEOd2j\nqWrMDWi4dM626mzQnfW4gEfJZSf3K4y10aAob1o19EOMzDWADXNGg0p/aQpCBYSN\nknRbsgK1vPP2M1/Jy/umLr4FMhT1KvPME0PZtaHop5P2wujGohsrsZIeL4hR8ArS\nHXRUXRF+6JT6dIMi9dG6vXiVnslbJ8qkgqx2TlVJFaesQr6opWHolqUPTknNlRiK\nhQIDAQABo1kwVzAVBgNVHREEDjAMggprdWJlcm5ldGVzMA4GA1UdDwEB/wQEAwIC\npDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBQYmB0qL0QEBNMO6l0YrmYl9DlS\nwDANBgkqhkiG9w0BAQsFAAOCAgEA3jI0uYO8HISi9UL2/aYf8W2G5lM1XAeVGCid\n78/4dbBR0RBsVX2kTf8LRAUdhXujB9k8U8mHfz4Q4FG2tE+jLQMPe+TccLiyyZQP\nfHenfKfpoAir5FVExCQ3bhOXXMnhYmZMwk4XFQGF2I8ss++d7NTHDuMX9H+L8gO5\nDiYnO2IaEOlKMxnjYSoIWlFupOL9pKFvzK5ahVfLqjEg5HeEGKoKCbQg0XX0ZYJz\nTg9h8hkEh8mkLrcESGajhutgXDztJ3ZWbimuP7KKMkiHH5mwpp+kP05KUP++SL35\nPl+wlyhlwYOCvkRSAzDRWFwIM/NfqCyP/9B/bygMKte4HOgoSlfOWBcQuHsl4zUo\nuga+tCMG37Uf5jm5hOQ+b1Ga02vrRHyxhuD5+bHeJpPXXRP6Mv6kRSGz5f7m4hc4\niwDT2V+ZYjDprQieaP06dQ3BAIOy7iDB5DJXh79mB+hyVwrdBvuLhPAXud1pJtEA\nJcgHy2bAcRD/Qa8fCpUt7iM35E3MZIGO5sTNtjicxBplCxbv8ltP1m8zlhVzofb0\nYWZ5f4lmwE99FQWXS8yzqF38hTu7WbJeiF8WIeBvJ1lwWw/+pmTxaE34Hi2PpbJW\nt38shOpJIlkv0kcC4eqWCo5QxaXeWWByVN5ouo1wv6/YP34NNKviq60wHE8gYd9N\nsxFZF/c=\n-----END CERTIFICATE-----\n"},"kind":"ConfigMap","metadata":{"annotations":{"kubernetes.io/description":"Contains a CA bundle that can be used to verify the kube-apiserver when using internal endpoints such as the internal service IP or kubernetes.default.svc. No other usage is guaranteed across distributions of Kubernetes clusters."},"creationTimestamp":"2022-07-20T17:35:40Z","name":"kube-root-ca.crt","namespace":"default","resourceVersion":"30000608063","uid":"a32d16fc-b691-4cba-a9ee-c190b16adde7"}}
       kubernetes.io/description: Contains a CA bundle that can be used to verify the
         kube-apiserver when using internal endpoints such as the internal service
         IP or kubernetes.default.svc. No other usage is guaranteed across distributions
@@ -60,7 +62,7 @@ items:
     creationTimestamp: "2022-07-20T17:35:40Z"
     name: kube-root-ca.crt
     namespace: default
-    resourceVersion: "30000608063"
+    resourceVersion: "33674720418"
     uid: a32d16fc-b691-4cba-a9ee-c190b16adde7
 kind: List
 metadata:
