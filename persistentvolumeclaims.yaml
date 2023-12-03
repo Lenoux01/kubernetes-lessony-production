@@ -16,7 +16,7 @@ items:
     - kubernetes.io/pvc-protection
     name: mongo-pvc-app
     namespace: default
-    resourceVersion: "30000608161"
+    resourceVersion: "33484133673"
     uid: 18b74c40-d245-444f-9315-1368f7f15aba
   spec:
     accessModes:
@@ -49,7 +49,7 @@ items:
     - kubernetes.io/pvc-protection
     name: mongo-pvc-logging
     namespace: default
-    resourceVersion: "30000608162"
+    resourceVersion: "33484133674"
     uid: 11d8962a-309b-44db-925f-4bf2a633d604
   spec:
     accessModes:

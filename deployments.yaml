@@ -4,20 +4,20 @@ items:
   kind: Deployment
   metadata:
     annotations:
-      deployment.kubernetes.io/revision: "39"
+      deployment.kubernetes.io/revision: "52"
       kubectl.kubernetes.io/last-applied-configuration: |
         {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"deployment.kubernetes.io/revision":"38"},"creationTimestamp":"2022-09-10T10:42:07Z","generation":62,"labels":{"k8slens-edit-resource-version":"v1"},"name":"lessony","namespace":"default","resourceVersion":"33675873201","uid":"57273ab5-3342-415f-8a5c-433bec07252a"},"spec":{"progressDeadlineSeconds":600,"replicas":1,"revisionHistoryLimit":10,"selector":{"matchLabels":{"app":"lessony"}},"strategy":{"rollingUpdate":{"maxSurge":"25%","maxUnavailable":"25%"},"type":"RollingUpdate"},"template":{"metadata":{"annotations":{"kubectl.kubernetes.io/restartedAt":"2023-06-11T16:31:31+02:00"},"creationTimestamp":null,"labels":{"app":"lessony"}},"spec":{"containers":[{"env":[{"name":"SMTP_USERNAME","valueFrom":{"secretKeyRef":{"key":"smtp-username","name":"secret"}}},{"name":"SMTP_PASSWORD","valueFrom":{"secretKeyRef":{"key":"smtp-password","name":"secret"}}},{"name":"JWT_SECRET","valueFrom":{"secretKeyRef":{"key":"jwt-secret","name":"secret"}}},{"name":"MONGO_URI_LOGGING","valueFrom":{"secretKeyRef":{"key":"mongo-uri-logging","name":"secret"}}},{"name":"MONGO_URI","valueFrom":{"secretKeyRef":{"key":"mongo-uri","name":"secret"}}},{"name":"SMTP_HOST","valueFrom":{"configMapKeyRef":{"key":"smtp-host","name":"config-map"}}},{"name":"SMTP_PORT","valueFrom":{"configMapKeyRef":{"key":"smtp-port","name":"config-map"}}},{"name":"EMAIL_FROM","valueFrom":{"configMapKeyRef":{"key":"email-from","name":"config-map"}}},{"name":"APP_PORT","value":"8080"},{"name":"APP_PREFIX_PATH","value":"/api/v1"}],"image":"kylecode/lessony:production","imagePullPolicy":"Always","name":"lessony","ports":[{"containerPort":8080,"protocol":"TCP"}],"resources":{},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File"}],"dnsPolicy":"ClusterFirst","imagePullSecrets":[{"name":"regcred"}],"restartPolicy":"Always","schedulerName":"default-scheduler","securityContext":{},"terminationGracePeriodSeconds":30}}},"status":{"availableReplicas":1,"conditions":[{"lastTransitionTime":"2022-11-06T09:58:38Z","lastUpdateTime":"2023-08-17T12:34:08Z","message":"ReplicaSet \"lessony-8458fb86b5\" has successfully progressed.","reason":"NewReplicaSetAvailable","status":"True","type":"Progressing"},{"lastTransitionTime":"2023-08-17T12:45:05Z","lastUpdateTime":"2023-08-17T12:45:05Z","message":"Deployment has minimum availability.","reason":"MinimumReplicasAvailable","status":"True","type":"Available"}],"observedGeneration":62,"readyReplicas":1,"replicas":1,"updatedReplicas":1}}
     creationTimestamp: "2022-09-10T10:42:07Z"
-    generation: 63
+    generation: 86
     labels:
       k8slens-edit-resource-version: v1
     name: lessony
     namespace: default
-    resourceVersion: "33676089316"
+    resourceVersion: "34001141745"
     uid: 57273ab5-3342-415f-8a5c-433bec07252a
   spec:
     progressDeadlineSeconds: 600
-    replicas: 1
+    replicas: 0
     revisionHistoryLimit: 10
     selector:
       matchLabels:
@@ -30,7 +30,7 @@ items:
     template:
       metadata:
         annotations:
-          kubectl.kubernetes.io/restartedAt: "2023-06-11T16:31:31+02:00"
+          kubectl.kubernetes.io/restartedAt: "2023-12-02T10:32:29Z"
         creationTimestamp: null
         labels:
           app: lessony
@@ -98,24 +98,20 @@ items:
         securityContext: {}
         terminationGracePeriodSeconds: 30
   status:
-    availableReplicas: 1
     conditions:
     - lastTransitionTime: "2022-11-06T09:58:38Z"
-      lastUpdateTime: "2023-08-17T13:03:16Z"
-      message: ReplicaSet "lessony-db4b9dd86" has successfully progressed.
+      lastUpdateTime: "2023-12-02T10:32:39Z"
+      message: ReplicaSet "lessony-5897d88987" has successfully progressed.
       reason: NewReplicaSetAvailable
       status: "True"
       type: Progressing
-    - lastTransitionTime: "2023-08-17T13:07:06Z"
-      lastUpdateTime: "2023-08-17T13:07:06Z"
+    - lastTransitionTime: "2023-12-02T11:18:52Z"
+      lastUpdateTime: "2023-12-02T11:18:52Z"
       message: Deployment has minimum availability.
       reason: MinimumReplicasAvailable
       status: "True"
       type: Available
-    observedGeneration: 63
-    readyReplicas: 1
-    replicas: 1
-    updatedReplicas: 1
+    observedGeneration: 86
 kind: List
 metadata:
   resourceVersion: ""

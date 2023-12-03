@@ -9,7 +9,7 @@ items:
       provider: kubernetes
     name: kubernetes
     namespace: default
-    resourceVersion: "30000608366"
+    resourceVersion: "33484134043"
     uid: a69e5b1b-4218-49e5-adb3-a6cc4b0493fc
   spec:
     clusterIP: 10.233.0.1
@@ -37,7 +37,7 @@ items:
     creationTimestamp: "2022-09-10T10:42:08Z"
     name: lessony-service
     namespace: default
-    resourceVersion: "30000608367"
+    resourceVersion: "33484134044"
     uid: 82d9de5a-6c5c-4c00-bc6a-9773ee8ef594
   spec:
     clusterIP: 10.233.52.253
@@ -66,7 +66,7 @@ items:
     creationTimestamp: "2022-09-10T10:32:44Z"
     name: mongodb-service
     namespace: default
-    resourceVersion: "30000608368"
+    resourceVersion: "33484134045"
     uid: 3debcc80-dcbf-45c3-b1f4-700ec7dd80b1
   spec:
     clusterIP: 10.233.23.75
@@ -97,7 +97,7 @@ items:
     creationTimestamp: "2022-09-10T10:40:43Z"
     name: mongodb-service-logging
     namespace: default
-    resourceVersion: "30000608369"
+    resourceVersion: "33484134046"
     uid: e2c24ead-59c1-4b57-aaa3-a1abe0c6a93d
   spec:
     clusterIP: 10.233.41.7

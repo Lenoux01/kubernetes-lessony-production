@@ -11,7 +11,7 @@ items:
     - external-attacher/cloud-ionos-com
     - external-provisioner.volume.kubernetes.io/finalizer
     name: pvc-11d8962a-309b-44db-925f-4bf2a633d604
-    resourceVersion: "30296192274"
+    resourceVersion: "33484133675"
     uid: 99924193-bc95-4987-b7c4-cea5d9dae68c
   spec:
     accessModes:
@@ -58,7 +58,7 @@ items:
     - external-attacher/cloud-ionos-com
     - external-provisioner.volume.kubernetes.io/finalizer
     name: pvc-18b74c40-d245-444f-9315-1368f7f15aba
-    resourceVersion: "30296192275"
+    resourceVersion: "33484133677"
     uid: df65ee9f-4816-4500-bd5f-5e6973e6e83d
   spec:
     accessModes:

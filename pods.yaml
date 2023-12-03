@@ -4,26 +4,26 @@ items:
   kind: Pod
   metadata:
     annotations:
-      cni.projectcalico.org/containerID: 0a4c731c97c646c9811de6c12f70fd2e5b20f75786e7e9458bc045c8394617ff
-      cni.projectcalico.org/podIP: 10.221.161.95/32
-      cni.projectcalico.org/podIPs: 10.221.161.95/32
-      kubectl.kubernetes.io/restartedAt: "2023-06-11T16:31:31+02:00"
-    creationTimestamp: "2023-08-17T13:05:26Z"
-    generateName: lessony-db4b9dd86-
+      cni.projectcalico.org/containerID: 72831fb74739dab655540670ee3928cd0e55406c4e0a88f0aca7760bf479fdce
+      cni.projectcalico.org/podIP: 10.223.7.211/32
+      cni.projectcalico.org/podIPs: 10.223.7.211/32
+      kubectl.kubernetes.io/restartedAt: "2023-12-02T09:27:42Z"
+    creationTimestamp: "2023-12-02T09:27:43Z"
+    generateName: lessony-7f8d597d8d-
     labels:
       app: lessony
-      pod-template-hash: db4b9dd86
-    name: lessony-db4b9dd86-kdxj9
+      pod-template-hash: 7f8d597d8d
+    name: lessony-7f8d597d8d-4wjcz
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
       blockOwnerDeletion: true
       controller: true
       kind: ReplicaSet
-      name: lessony-db4b9dd86
-      uid: 08e5e8fa-4074-403a-b1cb-6ddeddfe9b6d
-    resourceVersion: "33676089308"
-    uid: fe054df3-1d9b-4953-834e-e43e18c77abd
+      name: lessony-7f8d597d8d
+      uid: 4ab71f36-508b-4d1c-8df0-7a15afcc1bbc
+    resourceVersion: "33999080823"
+    uid: da833642-6582-464a-9840-fa6dcd67830b
   spec:
     containers:
     - env:
@@ -82,13 +82,13 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-hfnhx
+        name: kube-api-access-99xt5
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
     imagePullSecrets:
     - name: regcred
-    nodeName: prod-pool-1-qimbesl2hn
+    nodeName: prod-pool-1-5rjq2vzuzh
     preemptionPolicy: PreemptLowerPriority
     priority: 0
     restartPolicy: Always
@@ -107,7 +107,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-hfnhx
+    - name: kube-api-access-99xt5
       projected:
         defaultMode: 420
         sources:
@@ -128,46 +128,1012 @@ items:
   status:
     conditions:
     - lastProbeTime: null
-      lastTransitionTime: "2023-08-17T13:05:26Z"
+      lastTransitionTime: "2023-12-02T09:27:43Z"
       status: "True"
       type: Initialized
     - lastProbeTime: null
-      lastTransitionTime: "2023-08-17T13:07:06Z"
+      lastTransitionTime: "2023-12-02T09:27:47Z"
       status: "True"
       type: Ready
     - lastProbeTime: null
-      lastTransitionTime: "2023-08-17T13:07:06Z"
+      lastTransitionTime: "2023-12-02T09:27:47Z"
       status: "True"
       type: ContainersReady
     - lastProbeTime: null
-      lastTransitionTime: "2023-08-17T13:05:26Z"
+      lastTransitionTime: "2023-12-02T09:27:43Z"
       status: "True"
       type: PodScheduled
     containerStatuses:
-    - containerID: containerd://4dd1b90938b4e84778d9add22ac688417a4a54c69986642f62cef374cd30fa25
+    - containerID: containerd://0eec1d3f8732ede06bf7d2fd0937cfe6f26e4f65b2253e4cffa4cc03502719cb
       image: docker.io/kylecode/lessony:production
-      imageID: docker.io/kylecode/lessony@sha256:fbf591a46505c751b43c15fbe077fb5724d324a8c4435dbe37bb332f2f4cb10d
-      lastState:
-        terminated:
-          containerID: containerd://b00ad6ed2287e8901dcb9cea6c42f12bec577bb6035a4e27fe6579ddda0a0d72
-          exitCode: 0
-          finishedAt: "2023-08-17T13:07:03Z"
-          reason: Completed
-          startedAt: "2023-08-17T13:05:30Z"
+      imageID: docker.io/kylecode/lessony@sha256:2553efd8884bad820681b9413b3c3da3a4a9bd1899af7c452dd54833935a3eb8
+      lastState: {}
       name: lessony
       ready: true
-      restartCount: 1
+      restartCount: 0
       started: true
       state:
         running:
-          startedAt: "2023-08-17T13:07:05Z"
-    hostIP: 85.215.218.9
+          startedAt: "2023-12-02T09:27:46Z"
+    hostIP: 85.215.151.114
     phase: Running
-    podIP: 10.221.161.95
+    podIP: 10.223.7.211
     podIPs:
-    - ip: 10.221.161.95
+    - ip: 10.223.7.211
     qosClass: BestEffort
-    startTime: "2023-08-17T13:05:26Z"
+    startTime: "2023-12-02T09:27:43Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: a47134f5c9e07fb4bbf39af067b8b00c36f80b67bfbd8e5621f9b7141796d7e7
+      cni.projectcalico.org/podIP: 10.223.7.213/32
+      cni.projectcalico.org/podIPs: 10.223.7.213/32
+      kubectl.kubernetes.io/restartedAt: "2023-12-02T09:27:42Z"
+    creationTimestamp: "2023-12-02T09:27:46Z"
+    generateName: lessony-7f8d597d8d-
+    labels:
+      app: lessony
+      pod-template-hash: 7f8d597d8d
+    name: lessony-7f8d597d8d-cbtvf
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: lessony-7f8d597d8d
+      uid: 4ab71f36-508b-4d1c-8df0-7a15afcc1bbc
+    resourceVersion: "33999081192"
+    uid: d7656218-7beb-4752-9bef-fa0dbc7a6e34
+  spec:
+    containers:
+    - env:
+      - name: SMTP_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: smtp-username
+            name: secret
+      - name: SMTP_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: smtp-password
+            name: secret
+      - name: JWT_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: jwt-secret
+            name: secret
+      - name: MONGO_URI_LOGGING
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri-logging
+            name: secret
+      - name: MONGO_URI
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri
+            name: secret
+      - name: SMTP_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-host
+            name: config-map
+      - name: SMTP_PORT
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-port
+            name: config-map
+      - name: EMAIL_FROM
+        valueFrom:
+          configMapKeyRef:
+            key: email-from
+            name: config-map
+      - name: APP_PORT
+        value: "8080"
+      - name: APP_PREFIX_PATH
+        value: /api/v1
+      image: kylecode/lessony:production
+      imagePullPolicy: Always
+      name: lessony
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-xhq42
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: regcred
+    nodeName: prod-pool-1-5rjq2vzuzh
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-xhq42
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:46Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:49Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:49Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:46Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://e7c54614c87658a6d7039f2acd916aaa162bfba1fcc2c2e86adcf756a6bd2830
+      image: docker.io/kylecode/lessony:production
+      imageID: docker.io/kylecode/lessony@sha256:2553efd8884bad820681b9413b3c3da3a4a9bd1899af7c452dd54833935a3eb8
+      lastState: {}
+      name: lessony
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-12-02T09:27:49Z"
+    hostIP: 85.215.151.114
+    phase: Running
+    podIP: 10.223.7.213
+    podIPs:
+    - ip: 10.223.7.213
+    qosClass: BestEffort
+    startTime: "2023-12-02T09:27:46Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: 080f4e2a794ead7a8facc0e7aa24e7df7ff82f0232d24e091224942c501652d8
+      cni.projectcalico.org/podIP: 10.223.7.210/32
+      cni.projectcalico.org/podIPs: 10.223.7.210/32
+      kubectl.kubernetes.io/restartedAt: "2023-12-02T09:27:42Z"
+    creationTimestamp: "2023-12-02T09:27:43Z"
+    generateName: lessony-7f8d597d8d-
+    labels:
+      app: lessony
+      pod-template-hash: 7f8d597d8d
+    name: lessony-7f8d597d8d-g2smk
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: lessony-7f8d597d8d
+      uid: 4ab71f36-508b-4d1c-8df0-7a15afcc1bbc
+    resourceVersion: "33999080643"
+    uid: de16e7d8-288d-494e-95ad-41216d252c45
+  spec:
+    containers:
+    - env:
+      - name: SMTP_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: smtp-username
+            name: secret
+      - name: SMTP_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: smtp-password
+            name: secret
+      - name: JWT_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: jwt-secret
+            name: secret
+      - name: MONGO_URI_LOGGING
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri-logging
+            name: secret
+      - name: MONGO_URI
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri
+            name: secret
+      - name: SMTP_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-host
+            name: config-map
+      - name: SMTP_PORT
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-port
+            name: config-map
+      - name: EMAIL_FROM
+        valueFrom:
+          configMapKeyRef:
+            key: email-from
+            name: config-map
+      - name: APP_PORT
+        value: "8080"
+      - name: APP_PREFIX_PATH
+        value: /api/v1
+      image: kylecode/lessony:production
+      imagePullPolicy: Always
+      name: lessony
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-7l5x5
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: regcred
+    nodeName: prod-pool-1-5rjq2vzuzh
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-7l5x5
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:43Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:46Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:46Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:43Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://5d20a65ace3dd90a4b3639317537019aeb27f1f8184e7d187013cb928cb2996f
+      image: docker.io/kylecode/lessony:production
+      imageID: docker.io/kylecode/lessony@sha256:2553efd8884bad820681b9413b3c3da3a4a9bd1899af7c452dd54833935a3eb8
+      lastState: {}
+      name: lessony
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-12-02T09:27:45Z"
+    hostIP: 85.215.151.114
+    phase: Running
+    podIP: 10.223.7.210
+    podIPs:
+    - ip: 10.223.7.210
+    qosClass: BestEffort
+    startTime: "2023-12-02T09:27:43Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: 4494678f7a998a0fe8a8a5673b5b52f1cd5fc6c857e79971661ca3249d32277e
+      cni.projectcalico.org/podIP: 10.223.7.214/32
+      cni.projectcalico.org/podIPs: 10.223.7.214/32
+      kubectl.kubernetes.io/restartedAt: "2023-12-02T09:27:42Z"
+    creationTimestamp: "2023-12-02T09:27:47Z"
+    generateName: lessony-7f8d597d8d-
+    labels:
+      app: lessony
+      pod-template-hash: 7f8d597d8d
+    name: lessony-7f8d597d8d-hs29w
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: lessony-7f8d597d8d
+      uid: 4ab71f36-508b-4d1c-8df0-7a15afcc1bbc
+    resourceVersion: "33999081385"
+    uid: 4e8b33c5-47dc-4361-9d18-dc7dedc9e92c
+  spec:
+    containers:
+    - env:
+      - name: SMTP_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: smtp-username
+            name: secret
+      - name: SMTP_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: smtp-password
+            name: secret
+      - name: JWT_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: jwt-secret
+            name: secret
+      - name: MONGO_URI_LOGGING
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri-logging
+            name: secret
+      - name: MONGO_URI
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri
+            name: secret
+      - name: SMTP_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-host
+            name: config-map
+      - name: SMTP_PORT
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-port
+            name: config-map
+      - name: EMAIL_FROM
+        valueFrom:
+          configMapKeyRef:
+            key: email-from
+            name: config-map
+      - name: APP_PORT
+        value: "8080"
+      - name: APP_PREFIX_PATH
+        value: /api/v1
+      image: kylecode/lessony:production
+      imagePullPolicy: Always
+      name: lessony
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-7fkj4
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: regcred
+    nodeName: prod-pool-1-5rjq2vzuzh
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-7fkj4
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:47Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:50Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:50Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:47Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://664e8d649c3809b92297717c07b79af2db25540295bac94865757336fa9916d8
+      image: docker.io/kylecode/lessony:production
+      imageID: docker.io/kylecode/lessony@sha256:2553efd8884bad820681b9413b3c3da3a4a9bd1899af7c452dd54833935a3eb8
+      lastState: {}
+      name: lessony
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-12-02T09:27:50Z"
+    hostIP: 85.215.151.114
+    phase: Running
+    podIP: 10.223.7.214
+    podIPs:
+    - ip: 10.223.7.214
+    qosClass: BestEffort
+    startTime: "2023-12-02T09:27:47Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: a7055bc104c9a22412da5268c152f67eaa90629675428cff66467302803eaca7
+      cni.projectcalico.org/podIP: 10.223.7.209/32
+      cni.projectcalico.org/podIPs: 10.223.7.209/32
+      kubectl.kubernetes.io/restartedAt: "2023-12-02T09:27:42Z"
+    creationTimestamp: "2023-12-02T09:27:43Z"
+    generateName: lessony-7f8d597d8d-
+    labels:
+      app: lessony
+      pod-template-hash: 7f8d597d8d
+    name: lessony-7f8d597d8d-kwnpp
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: lessony-7f8d597d8d
+      uid: 4ab71f36-508b-4d1c-8df0-7a15afcc1bbc
+    resourceVersion: "33999080451"
+    uid: 111455d2-9f6a-4c48-9fa4-d4ace9c2e315
+  spec:
+    containers:
+    - env:
+      - name: SMTP_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: smtp-username
+            name: secret
+      - name: SMTP_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: smtp-password
+            name: secret
+      - name: JWT_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: jwt-secret
+            name: secret
+      - name: MONGO_URI_LOGGING
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri-logging
+            name: secret
+      - name: MONGO_URI
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri
+            name: secret
+      - name: SMTP_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-host
+            name: config-map
+      - name: SMTP_PORT
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-port
+            name: config-map
+      - name: EMAIL_FROM
+        valueFrom:
+          configMapKeyRef:
+            key: email-from
+            name: config-map
+      - name: APP_PORT
+        value: "8080"
+      - name: APP_PREFIX_PATH
+        value: /api/v1
+      image: kylecode/lessony:production
+      imagePullPolicy: Always
+      name: lessony
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-zxvxq
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: regcred
+    nodeName: prod-pool-1-5rjq2vzuzh
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-zxvxq
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:43Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:45Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:45Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:43Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://3fc8a95928ff4aaef40b7e23d16da98e6aee5ab25ffc0978f69001ead42c691f
+      image: docker.io/kylecode/lessony:production
+      imageID: docker.io/kylecode/lessony@sha256:2553efd8884bad820681b9413b3c3da3a4a9bd1899af7c452dd54833935a3eb8
+      lastState: {}
+      name: lessony
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-12-02T09:27:45Z"
+    hostIP: 85.215.151.114
+    phase: Running
+    podIP: 10.223.7.209
+    podIPs:
+    - ip: 10.223.7.209
+    qosClass: BestEffort
+    startTime: "2023-12-02T09:27:43Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: 71144727132f17216492e7fb040425fe17264cb624fe8ed1a1bfcff2adf7b26d
+      cni.projectcalico.org/podIP: 10.223.7.215/32
+      cni.projectcalico.org/podIPs: 10.223.7.215/32
+      kubectl.kubernetes.io/restartedAt: "2023-12-02T09:27:42Z"
+    creationTimestamp: "2023-12-02T09:27:48Z"
+    generateName: lessony-7f8d597d8d-
+    labels:
+      app: lessony
+      pod-template-hash: 7f8d597d8d
+    name: lessony-7f8d597d8d-p56hm
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: lessony-7f8d597d8d
+      uid: 4ab71f36-508b-4d1c-8df0-7a15afcc1bbc
+    resourceVersion: "33999081740"
+    uid: 97a134c5-d708-460c-a2a9-9fcc8db809f0
+  spec:
+    containers:
+    - env:
+      - name: SMTP_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: smtp-username
+            name: secret
+      - name: SMTP_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: smtp-password
+            name: secret
+      - name: JWT_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: jwt-secret
+            name: secret
+      - name: MONGO_URI_LOGGING
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri-logging
+            name: secret
+      - name: MONGO_URI
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri
+            name: secret
+      - name: SMTP_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-host
+            name: config-map
+      - name: SMTP_PORT
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-port
+            name: config-map
+      - name: EMAIL_FROM
+        valueFrom:
+          configMapKeyRef:
+            key: email-from
+            name: config-map
+      - name: APP_PORT
+        value: "8080"
+      - name: APP_PREFIX_PATH
+        value: /api/v1
+      image: kylecode/lessony:production
+      imagePullPolicy: Always
+      name: lessony
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-65ndx
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: regcred
+    nodeName: prod-pool-1-5rjq2vzuzh
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-65ndx
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:48Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:52Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:52Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:48Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://2d105eaac59d0cb95ce549f4a860d52a900b761c5d176e51af115bf2eb909c31
+      image: docker.io/kylecode/lessony:production
+      imageID: docker.io/kylecode/lessony@sha256:2553efd8884bad820681b9413b3c3da3a4a9bd1899af7c452dd54833935a3eb8
+      lastState: {}
+      name: lessony
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-12-02T09:27:51Z"
+    hostIP: 85.215.151.114
+    phase: Running
+    podIP: 10.223.7.215
+    podIPs:
+    - ip: 10.223.7.215
+    qosClass: BestEffort
+    startTime: "2023-12-02T09:27:48Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cni.projectcalico.org/containerID: e8ac8936603b51bd7683f7b32f869448b6374695b75b3261dc6d970b2ca31d83
+      cni.projectcalico.org/podIP: 10.223.7.212/32
+      cni.projectcalico.org/podIPs: 10.223.7.212/32
+      kubectl.kubernetes.io/restartedAt: "2023-12-02T09:27:42Z"
+    creationTimestamp: "2023-12-02T09:27:45Z"
+    generateName: lessony-7f8d597d8d-
+    labels:
+      app: lessony
+      pod-template-hash: 7f8d597d8d
+    name: lessony-7f8d597d8d-xs7jk
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: lessony-7f8d597d8d
+      uid: 4ab71f36-508b-4d1c-8df0-7a15afcc1bbc
+    resourceVersion: "33999081012"
+    uid: 77064acf-1fd2-4267-9d64-a81fa1a58c18
+  spec:
+    containers:
+    - env:
+      - name: SMTP_USERNAME
+        valueFrom:
+          secretKeyRef:
+            key: smtp-username
+            name: secret
+      - name: SMTP_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: smtp-password
+            name: secret
+      - name: JWT_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: jwt-secret
+            name: secret
+      - name: MONGO_URI_LOGGING
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri-logging
+            name: secret
+      - name: MONGO_URI
+        valueFrom:
+          secretKeyRef:
+            key: mongo-uri
+            name: secret
+      - name: SMTP_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-host
+            name: config-map
+      - name: SMTP_PORT
+        valueFrom:
+          configMapKeyRef:
+            key: smtp-port
+            name: config-map
+      - name: EMAIL_FROM
+        valueFrom:
+          configMapKeyRef:
+            key: email-from
+            name: config-map
+      - name: APP_PORT
+        value: "8080"
+      - name: APP_PREFIX_PATH
+        value: /api/v1
+      image: kylecode/lessony:production
+      imagePullPolicy: Always
+      name: lessony
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hpwgr
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: regcred
+    nodeName: prod-pool-1-5rjq2vzuzh
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-hpwgr
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:45Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:48Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:48Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-12-02T09:27:45Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://ac9a5a122d143136e95f6e3db2850d3acceeda59c2a992e0d6627842c015ab23
+      image: docker.io/kylecode/lessony:production
+      imageID: docker.io/kylecode/lessony@sha256:2553efd8884bad820681b9413b3c3da3a4a9bd1899af7c452dd54833935a3eb8
+      lastState: {}
+      name: lessony
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-12-02T09:27:47Z"
+    hostIP: 85.215.151.114
+    phase: Running
+    podIP: 10.223.7.212
+    podIPs:
+    - ip: 10.223.7.212
+    qosClass: BestEffort
+    startTime: "2023-12-02T09:27:45Z"
 kind: List
 metadata:
   resourceVersion: ""
